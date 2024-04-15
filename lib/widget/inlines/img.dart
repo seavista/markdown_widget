@@ -21,9 +21,10 @@ class ImageNode extends SpanNode {
     (attributes['width'] != null)
         ? width = double.parse(attributes['width']!)
         : 100;
-    if (attributes['height'] != null) {
-      height = double.parse(attributes['height']!);
-    }
+    (attributes['height'] != null)
+        ? height = double.parse(attributes['height']!)
+        : 100;
+
     final imageUrl = attributes['src'] ?? '';
     final alt = attributes['alt'] ?? '';
     final isNetImage = imageUrl.startsWith('http');
