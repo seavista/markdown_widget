@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:markdown_widget/markdown_widget.dart';
@@ -30,10 +32,16 @@ class ImageNode extends SpanNode {
             fit: BoxFit.cover, errorBuilder: (ctx, error, stacktrace) {
             return buildErrorImage(imageUrl, alt, error);
           })
-        : Image.asset(imageUrl, width: width, height: height, fit: BoxFit.cover,
-            errorBuilder: (ctx, error, stacktrace) {
+        : Image.file(File(imageUrl),
+            width: width,
+            height: height,
+            fit: BoxFit.cover, errorBuilder: (ctx, error, stacktrace) {
             return buildErrorImage(imageUrl, alt, error);
           });
+    // Image.asset(imageUrl, width: width, height: height, fit: BoxFit.cover,
+    //     errorBuilder: (ctx, error, stacktrace) {
+    //     return buildErrorImage(imageUrl, alt, error);
+    //   });
     final result = (parent != null && parent is LinkNode)
         ? imgWidget
         : Builder(builder: (context) {

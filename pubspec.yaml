@@ -16,14 +16,14 @@ dependencies:
     sdk: flutter
 
   #markdown data parser
-  markdown: ^7.2.1
+  markdown: ^4.0.0
   #highlight code
   highlight: ^0.7.0
   flutter_highlight: ^0.7.0
 
 
   # to click link
-  url_launcher: ^6.2.2
+  url_launcher: ^6.1.7
   # to get the index number on scroll for listview
   visibility_detector: ^0.4.0+2
   # make listview available to jump to index
