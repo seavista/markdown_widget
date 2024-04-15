@@ -20,7 +20,7 @@ class ImageNode extends SpanNode {
     double? height;
     (attributes['width'] != null)
         ? width = double.parse(attributes['width']!)
-        : 100;
+        : 200;
     (attributes['height'] != null)
         ? height = double.parse(attributes['height']!)
         : 100;
