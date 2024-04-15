@@ -36,9 +36,9 @@ class ImageNode extends SpanNode {
             return buildErrorImage(imageUrl, alt, error);
           })
         : Image.file(File(imageUrl),
-            width: width,
-            height: height,
-            fit: BoxFit.cover, errorBuilder: (ctx, error, stacktrace) {
+            width: 200,
+            height: 100,
+            fit: BoxFit.scaleDown, errorBuilder: (ctx, error, stacktrace) {
             return buildErrorImage(imageUrl, alt, error);
           });
     // Image.asset(imageUrl, width: width, height: height, fit: BoxFit.cover,
