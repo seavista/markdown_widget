@@ -18,7 +18,9 @@ class ImageNode extends SpanNode {
   InlineSpan build() {
     double? width;
     double? height;
-    if (attributes['width'] != null) width = double.parse(attributes['width']!);
+    (attributes['width'] != null)
+        ? width = double.parse(attributes['width']!)
+        : 100;
     if (attributes['height'] != null) {
       height = double.parse(attributes['height']!);
     }
